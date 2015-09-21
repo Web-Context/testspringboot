@@ -1,5 +1,8 @@
 package hello.controllers.item;
 
+import hello.entities.Item;
+import hello.entities.SuperEntity;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,19 +24,19 @@ public class ItemController {
 	}
 
 	@RequestMapping(value="/{id}", method = RequestMethod.GET)
-	public Item findById(@PathVariable Integer id) {
+	public SuperEntity findById(@PathVariable Integer id) {
 		return repo.findOne(id);
 	}
 	
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public Item addItem( @RequestBody Item item ) {
+	public SuperEntity addItem( @RequestBody Item item ) {
 		item.setId(null);
 		return repo.saveAndFlush(item);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-	public Item updateItem( @RequestBody Item updatedItem, @PathVariable Integer id ) {
+	public SuperEntity updateItem( @RequestBody Item updatedItem, @PathVariable Integer id ) {
 		updatedItem.setId(id);
 		return repo.saveAndFlush(updatedItem);
 	}
