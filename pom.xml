@@ -105,4 +105,25 @@
 			<url>https://repo.spring.io/libs-release</url>
 		</pluginRepository>
 	</pluginRepositories>
+	<url>https://bitbucket.org/webcontext/testspringboot/overview</url>
+	<name>TestSpringBoot</name>
+	<description>A Small project to test spring boot.</description>
+	<inceptionYear>2015</inceptionYear>
+	<organization>
+		<name>webcontext</name>
+		<url>http://www.web-context.com/</url>
+	</organization>
+	<scm>
+		<url>https://bitbucket.org/webcontext/testspringboot/</url>
+		<connection>scm:git:git@bitbucket.org:webcontext/testspringboot.git</connection>
+		<developerConnection>scm:git:git@bitbucket.org:webcontext/testspringboot.git</developerConnection>
+		<tag>${project.version}</tag>
+	</scm>
+	<issueManagement>
+		<url>https://bitbucket.org/webcontext/testspringboot/issues?status=new&amp;status=open</url>
+		<system>BitBucket.org</system>
+	</issueManagement>
+	<ciManagement>
+		<system>TravisCI</system>
+	</ciManagement>
 </project>
