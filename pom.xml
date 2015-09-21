@@ -5,7 +5,7 @@
 
 	<groupId>com.webcontext.apps</groupId>
 	<artifactId>spring-boot</artifactId>
-	<version>0.1.0</version>
+	<version>0.1.0-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -120,10 +120,11 @@
 		<tag>${project.version}</tag>
 	</scm>
 	<issueManagement>
-		<url>https://bitbucket.org/webcontext/testspringboot/issues?status=new&amp;status=open</url>
+		<url>https://bitbucket.org/webcontext/testspringboot/issues</url>
 		<system>BitBucket.org</system>
 	</issueManagement>
 	<ciManagement>
 		<system>TravisCI</system>
+		<url>https://travis-ci.org/Web-Context/testspringboot</url>
 	</ciManagement>
 </project>
