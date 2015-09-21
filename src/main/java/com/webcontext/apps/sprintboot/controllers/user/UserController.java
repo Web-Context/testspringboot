@@ -27,6 +27,11 @@ public class UserController {
 		return repo.findOne(id);
 	}
 
+	@RequestMapping(value = "/search/{username}", method = RequestMethod.GET)
+	public User findByUsername(@PathVariable String username) {
+		return repo.findByUsername(username);
+	}
+
 	@RequestMapping(method = RequestMethod.POST)
 	public User addItem(@RequestBody User item) {
 		item.setId(null);
