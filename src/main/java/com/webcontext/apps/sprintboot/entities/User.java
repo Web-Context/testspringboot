@@ -1,6 +1,11 @@
-package hello.entities;
+package com.webcontext.apps.sprintboot.entities;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * This class is a User model.
@@ -11,13 +16,19 @@ import javax.persistence.Entity;
 @Entity
 public class User extends SuperEntity {
 
+	@NotNull
+	@NotEmpty
+	@Size(min = 4, max = 30)
 	private String username;
-
+	@NotNull
+	@Size(min = 4, max = 30, message = "")
 	private String password;
 
+	@Email
 	private String email;
-
+	@Size(min = 0, max = 60)
 	private String firstName;
+	@Size(min = 0, max = 60)
 	private String lastName;
 
 	public User() {

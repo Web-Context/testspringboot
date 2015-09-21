@@ -1,7 +1,4 @@
-package hello.controllers.item;
-
-import hello.entities.Item;
-import hello.entities.SuperEntity;
+package com.webcontext.apps.sprintboot.controllers.item;
 
 import java.util.List;
 
@@ -11,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.webcontext.apps.sprintboot.entities.Item;
+import com.webcontext.apps.sprintboot.entities.SuperEntity;
 
 @RestController
 @RequestMapping("/items")

@@ -1,4 +1,4 @@
-package hello.entities;
+package com.webcontext.apps.sprintboot.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
