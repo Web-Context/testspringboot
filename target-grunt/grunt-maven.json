@@ -1,0 +1,10 @@
+{
+    "filesToWatch": "/home/frederic/Projects/java/spring/testspringboot/src/main/webapp/static/**",
+    "directoryToWatch": "/home/frederic/Projects/java/spring/testspringboot/src/main/webapp/static",
+    "projectRootPath": "/home/frederic/Projects/java/spring/testspringboot",
+    "targetPath": "/home/frederic/Projects/java/spring/testspringboot/target",
+    "sourceDirectory": "src/main/webapp",
+    "jsSourceDirectory": "static",
+    "warTargetDirectory": "static",
+    "filteredFiles": ["**/node_modules.tar"]
+}
