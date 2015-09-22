@@ -1,4 +1,4 @@
-package com.webcontext.apps.sprintboot.controllers.item;
+package com.webcontext.apps.sprintboot.controllers.user;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,6 +12,7 @@ import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.webcontext.apps.sprintboot.Application;
+import com.webcontext.apps.sprintboot.controllers.item.ItemRepository;
 import com.webcontext.apps.sprintboot.entities.Item;
 
 @RunWith(SpringJUnit4ClassRunner.class)
