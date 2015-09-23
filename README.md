@@ -15,3 +15,7 @@ to run :
     $> mvn spring-boot:run
 
 and try browsing [http://localhost:8080/](http://localhost:8080/ "click to open local spring instance")
+
+
+
+see [here](http://g00glen00b.be/spring-boot-rest-assured/) and [there](http://www.jayway.com/2014/07/04/integration-testing-a-spring-boot-application/) for  IT testing purpose.

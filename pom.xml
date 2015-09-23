@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>com.webcontext.apps</groupId>
 	<artifactId>spring-boot</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.2.6.RELEASE</version>
 	</parent>
-
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -39,30 +34,43 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>pl.allegro</groupId> -->
-			<!-- <artifactId>grunt-maven-plugin</artifactId> -->
-			<!-- <version>1.5.0</version> -->
-			<!-- <configuration> -->
-
-			<!-- </configuration> -->
-			<!-- <executions> -->
-			<!-- <execution> -->
-			<!-- <goals> -->
-			<!-- <goal>create-resources</goal> -->
-			<!-- <goal>bower</goal> -->
-			<!-- </goals> -->
-			<!-- </execution> -->
-			<!-- </executions> -->
-			<!-- </plugin> -->
+			<!-- <plugin>-->
+			<!-- <groupId>pl.allegro</groupId>-->
+			<!-- <artifactId>grunt-maven-plugin</artifactId>-->
+			<!-- <version>1.5.0</version>-->
+			<!-- <configuration>-->
+			<!-- </configuration>-->
+			<!-- <executions>-->
+			<!-- <execution>-->
+			<!-- <goals>-->
+			<!-- <goal>create-resources</goal>-->
+			<!-- <goal>bower</goal>-->
+			<!-- </goals>-->
+			<!-- </execution>-->
+			<!-- </executions>-->
+			<!-- </plugin>-->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -75,7 +83,6 @@
 				</dependencies>
 			</plugin>
 		</plugins>
-
 		<pluginManagement>
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
@@ -90,20 +97,17 @@
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>pl.allegro</groupId>
-										<artifactId>
-											grunt-maven-plugin
+										<artifactId>grunt-maven-plugin
 										</artifactId>
-										<versionRange>
-											[1.5.0,)
+										<versionRange>[1.5.0,)
 										</versionRange>
 										<goals>
-											<goal>
-												create-resources
+											<goal>create-resources
 											</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
@@ -113,7 +117,6 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
 	<repositories>
 		<repository>
 			<id>spring-releases</id>
