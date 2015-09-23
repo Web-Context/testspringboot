@@ -1,4 +1,4 @@
-package com.webcontext.apps.sprintboot.entities;
+package com.webcontext.apps.sprintboot.core.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

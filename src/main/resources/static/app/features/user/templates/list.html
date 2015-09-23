@@ -1,0 +1,31 @@
+<div ng-controller="UserController">
+	<div class="alert alert-info" role="alert"
+		ng-hide="users && users.length > 0">There are no users yet.</div>
+	<form class="form-horizontal" role="form"
+		ng-submit="addUser(newItem)">
+		<div class="form-group" ng-repeat="user in users">
+			<div class="checkbox col-xs-9">
+				<label> <input type="checkbox" ng-model="user"
+					ng-change="updateUser(user)" /> {{item.description}}
+				</label>
+			</div>
+			<div class="col-xs-3">
+				<button class="pull-right btn btn-danger" type="button"
+					title="Delete" ng-click="deleteUser(user)">
+					<span class="glyphicon glyphicon-trash"></span>
+				</button>
+			</div>
+		</div>
+		<hr />
+		<div class="input-group">
+			<input type="text" class="form-control" ng-model="newUser"
+				placeholder="Enter the description..." /> <span
+				class="input-group-btn">
+				<button class="btn btn-default" type="submit"
+					ng-disabled="!newUser" title="Add">
+					<span class="glyphicon glyphicon-plus"></span>
+				</button>
+			</span>
+		</div>
+	</form>
+</div>

@@ -12,7 +12,8 @@ import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.webcontext.apps.sprintboot.Application;
-import com.webcontext.apps.sprintboot.entities.User;
+import com.webcontext.apps.sprintboot.features.user.persistence.User;
+import com.webcontext.apps.sprintboot.features.user.persistence.UserRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
