@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.webcontext.apps</groupId>
-	<artifactId>spring-boot</artifactId>
+	<artifactId>mcg-application</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -59,21 +59,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- <plugin>-->
-			<!-- <groupId>pl.allegro</groupId>-->
-			<!-- <artifactId>grunt-maven-plugin</artifactId>-->
-			<!-- <version>1.5.0</version>-->
-			<!-- <configuration>-->
-			<!-- </configuration>-->
-			<!-- <executions>-->
-			<!-- <execution>-->
-			<!-- <goals>-->
-			<!-- <goal>create-resources</goal>-->
-			<!-- <goal>bower</goal>-->
-			<!-- </goals>-->
-			<!-- </execution>-->
-			<!-- </executions>-->
-			<!-- </plugin>-->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -100,13 +85,10 @@
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>pl.allegro</groupId>
-										<artifactId>grunt-maven-plugin
-										</artifactId>
-										<versionRange>[1.5.0,)
-										</versionRange>
+										<artifactId>grunt-maven-plugin</artifactId>
+										<versionRange>[1.5.0,)</versionRange>
 										<goals>
-											<goal>create-resources
-											</goal>
+											<goal>create-resources</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
@@ -117,6 +99,27 @@
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
+
+				<plugin>
+				   <groupId>org.codehaus.mojo</groupId>
+				   <artifactId>exec-maven-plugin</artifactId>
+				   <executions>
+				     <execution>
+				     <phase>generate-sources</phase>
+				     <goals>
+				      <goal>exec</goal>
+				     </goals>
+				     </execution>
+				   </executions>
+				   <configuration>
+				     <executable>bower</executable>
+				     <arguments>
+				      <argument>install</argument>
+				     </arguments>
+				     <workingDirectory>${basedir}/src/main/resources/static/</workingDirectory>
+				   </configuration>
+				 </plugin>
+
 			</plugins>
 		</pluginManagement>
 	</build>
