@@ -89,6 +89,7 @@
 										<versionRange>[1.5.0,)</versionRange>
 										<goals>
 											<goal>create-resources</goal>
+											<goal>bower</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
@@ -100,7 +101,7 @@
 					</configuration>
 				</plugin>
 
-				<plugin>
+				<!--plugin>
 				   <groupId>org.codehaus.mojo</groupId>
 				   <artifactId>exec-maven-plugin</artifactId>
 				   <executions>
@@ -118,7 +119,7 @@
 				     </arguments>
 				     <workingDirectory>${basedir}/src/main/resources/static/</workingDirectory>
 				   </configuration>
-				 </plugin>
+				 </plugin-->
 
 			</plugins>
 		</pluginManagement>
@@ -135,6 +136,18 @@
 			<url>https://repo.spring.io/libs-release</url>
 		</pluginRepository>
 	</pluginRepositories>
+
+	<developers>
+		<developer>
+			<name>Frédéric Delorme</name>
+			<email>frederic.delorme@web-context.com</email>
+			<roles>
+				<role>Software Architect</role>
+			</roles>
+			<timezone>Europe/Paris</timezone>
+		</developer>
+	</developers>
+
 	<url>https://bitbucket.org/webcontext/testspringboot/overview</url>
 	<name>TestSpringBoot</name>
 	<description>A Small project to test spring boot.</description>
