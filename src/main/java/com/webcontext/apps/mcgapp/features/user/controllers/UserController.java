@@ -32,7 +32,13 @@ public class UserController {
 	public User findByUsername(@PathVariable String username) {
 		return userRepo.findByUsername(username);
 	}
-
+	
+	@RequestMapping(value = "/searchmail/{email}", method = RequestMethod.GET)
+	public User findByEmail(@PathVariable String email) {
+		return userRepo.findByEmail(email).get(0);
+	}
+	
+	
 	@RequestMapping(method = RequestMethod.POST)
 	public User addItem(@RequestBody User item) {
 		item.setId(null);
