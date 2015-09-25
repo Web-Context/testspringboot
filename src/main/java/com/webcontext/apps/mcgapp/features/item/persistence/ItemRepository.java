@@ -1,4 +1,4 @@
-package com.webcontext.apps.sprintboot.features.item.persistence;
+package com.webcontext.apps.mcgapp.features.item.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

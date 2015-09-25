@@ -1,4 +1,4 @@
-package com.webcontext.apps.sprintboot.features.user.persistence;
+package com.webcontext.apps.mcgapp.features.user.persistence;
 
 import java.util.List;
 

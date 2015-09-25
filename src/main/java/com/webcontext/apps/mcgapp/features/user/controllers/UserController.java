@@ -1,4 +1,4 @@
-package com.webcontext.apps.sprintboot.features.user.controllers;
+package com.webcontext.apps.mcgapp.features.user.controllers;
 
 import java.util.List;
 
@@ -9,45 +9,45 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.webcontext.apps.sprintboot.features.user.persistence.User;
-import com.webcontext.apps.sprintboot.features.user.persistence.UserRepository;
+import com.webcontext.apps.mcgapp.features.user.persistence.User;
+import com.webcontext.apps.mcgapp.features.user.persistence.UserRepository;
 
 @RestController
 @RequestMapping("/users")
 public class UserController {
 	@Autowired
-	private UserRepository repo;
+	private UserRepository userRepo;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public List<User> findUsers() {
-		return repo.findAll();
+		return userRepo.findAll();
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public User findById(@PathVariable Integer id) {
-		return repo.findOne(id);
+		return userRepo.findOne(id);
 	}
 
 	@RequestMapping(value = "/search/{username}", method = RequestMethod.GET)
 	public User findByUsername(@PathVariable String username) {
-		return repo.findByUsername(username);
+		return userRepo.findByUsername(username);
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	public User addItem(@RequestBody User item) {
 		item.setId(null);
-		return repo.saveAndFlush(item);
+		return userRepo.saveAndFlush(item);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
 	public User updateItem(@RequestBody User updatedItem,
 			@PathVariable Integer id) {
 		updatedItem.setId(id);
-		return repo.saveAndFlush(updatedItem);
+		return userRepo.saveAndFlush(updatedItem);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public void deleteItem(@PathVariable Integer id) {
-		repo.delete(id);
+		userRepo.delete(id);
 	}
 }

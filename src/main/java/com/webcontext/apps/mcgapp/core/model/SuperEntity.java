@@ -1,4 +1,4 @@
-package com.webcontext.apps.sprintboot.core.model;
+package com.webcontext.apps.mcgapp.core.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

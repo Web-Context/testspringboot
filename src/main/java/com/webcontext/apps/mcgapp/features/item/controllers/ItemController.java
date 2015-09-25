@@ -1,4 +1,4 @@
-package com.webcontext.apps.sprintboot.features.item.controllers;
+package com.webcontext.apps.mcgapp.features.item.controllers;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.webcontext.apps.sprintboot.core.model.SuperEntity;
-import com.webcontext.apps.sprintboot.features.item.persistence.Item;
-import com.webcontext.apps.sprintboot.features.item.persistence.ItemRepository;
+import com.webcontext.apps.mcgapp.core.model.SuperEntity;
+import com.webcontext.apps.mcgapp.features.item.persistence.Item;
+import com.webcontext.apps.mcgapp.features.item.persistence.ItemRepository;
 
 @RestController
 @RequestMapping("/items")

@@ -1,9 +1,9 @@
-package com.webcontext.apps.sprintboot.features.item.persistence;
+package com.webcontext.apps.mcgapp.features.item.persistence;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-import com.webcontext.apps.sprintboot.core.model.SuperEntity;
+import com.webcontext.apps.mcgapp.core.model.SuperEntity;
 
 @Entity
 public class Item extends SuperEntity {

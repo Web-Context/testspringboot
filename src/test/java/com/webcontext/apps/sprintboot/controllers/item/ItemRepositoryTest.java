@@ -11,9 +11,9 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.webcontext.apps.sprintboot.Application;
-import com.webcontext.apps.sprintboot.features.item.persistence.Item;
-import com.webcontext.apps.sprintboot.features.item.persistence.ItemRepository;
+import com.webcontext.apps.mcgapp.Application;
+import com.webcontext.apps.mcgapp.features.item.persistence.Item;
+import com.webcontext.apps.mcgapp.features.item.persistence.ItemRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
